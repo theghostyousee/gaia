@@ -1,0 +1,136 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --res: calc(0.1 * 1vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+#numberDisplay {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#proofButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#proofButton:hover {
+  background-color: rgb(87, 85, 85);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+  padding: 0 100px; /* Adjust padding as needed */
+}
+
+.image-container {
+  animation: tiltAnimation 2s infinite alternate ease-in-out;
+}
+
+.tilting-image {
+  height: 80px; /* Adjust as needed */
+}
+
+.social {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 12%;
+  display: flex;
+}
+
+.social img {
+  width: 50px;
+  cursor: pointer;
+}
+
+button {
+  width: 160px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2223;
+  background-image: linear-gradient(to right, #afdceb, #d0dce8, #d0dce8, #afdceb);
+  cursor: pointer;
+  height: 35px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 40px;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+
+button:hover{
+    background-image: linear-gradient(to right, #afdceb, #d0dce8, #d0dce8, #afdceb);
+    box-shadow: 0 4px 15px 0 rgba(134, 197, 216, 0.7);
+}
+
+img{
+    width: 350px;
+}
+
+@keyframes tiltAnimation {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    text-align: center;
+    padding: 0 40px; /* Adjust padding as needed */
+  }
+  .tilting-image {
+    height: 60px; /* Adjust as needed */
+  }
+}
